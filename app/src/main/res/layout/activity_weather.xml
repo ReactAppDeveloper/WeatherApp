@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".WeatherActivity"
+    android:background="@color/bg_splash">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weatherIconImageView"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/icon_na"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/condition_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/temperature"
+        android:id="@+id/temperatureTextView"
+        android:layout_below="@+id/weatherIconImageView"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:typeface="serif" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/condition"
+        android:id="@+id/conditionTextView"
+        android:layout_below="@+id/temperatureTextView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/location"
+        android:id="@+id/locationTextView"
+        android:layout_below="@+id/conditionTextView"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:id="@+id/forecastContainer"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/locationTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:baselineAligned="false">
+        <fragment
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:name="comsol.com.weatherapp.fragments.WeatherConditionFragment"
+            android:id="@+id/forecast_0"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_weather_condition" />
+        <fragment
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:name="comsol.com.weatherapp.fragments.WeatherConditionFragment"
+            android:id="@+id/forecast_1"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_weather_condition" />
+        <fragment
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:name="comsol.com.weatherapp.fragments.WeatherConditionFragment"
+            android:id="@+id/forecast_2"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_weather_condition" />
+        <fragment
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:name="comsol.com.weatherapp.fragments.WeatherConditionFragment"
+            android:id="@+id/forecast_3"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_weather_condition" />
+        <fragment
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:name="comsol.com.weatherapp.fragments.WeatherConditionFragment"
+            android:id="@+id/forecast_4"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_weather_condition" />
+        <fragment
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:name="comsol.com.weatherapp.fragments.WeatherConditionFragment"
+            android:id="@+id/forecast_5"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_weather_condition" />
+        <fragment
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:name="comsol.com.weatherapp.fragments.WeatherConditionFragment"
+            android:id="@+id/forecast_6"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_weather_condition" />
+    </LinearLayout>
+
+</RelativeLayout>
